@@ -35,7 +35,7 @@ class Output
     public function flush()
     {
         $handle = fopen($this->file, 'w');
-        fputcsv($handle, ['Package', 'Link', 'Downloads']);
+        fputcsv($handle, ['Package', 'Link', 'Downloads'], ';');
 
         foreach ($this->buffer as $row) {
             fputcsv($handle, [
