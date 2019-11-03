@@ -42,7 +42,9 @@ class Output
                 $row['packageName'],
                 'https://packagist.org/packages/'.$row['packageName'],
                 $row['downloads'],
-            ]);
+            ],
+            ';'
+            );
         }
 
         fclose($handle);

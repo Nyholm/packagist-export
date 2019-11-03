@@ -17,8 +17,8 @@ php-translation/loco-adapter;library;["symfony/yaml: ^2.7 || ^3.0 || ^4.0", "sym
 The output file looks like this: 
 
 ```csv
-Package,Link,Downloads
-php-translation/loco-adapter,https://packagist.org/packages/php-translation/loco-adapter,229856
+Package;Link;Downloads
+php-translation/loco-adapter;https://packagist.org/packages/php-translation/loco-adapter;229856
 ```
 
 ## How to run
