@@ -25,14 +25,15 @@ class Parser
 
         return [
             'packageName' => $row[0],
+            'type' => $row[1],
             'downloads' => (int) $row[3],
         ];
     }
 
     private function shouldBeUsed(array $row): bool
     {
-        // Filter away packages with less than 1.000 downloads
-        if (!isset($row[3]) || $row[3] < 1000) {
+        // Filter away packages with less than 100.000 downloads
+        if (!isset($row[3]) || $row[3] < 100000) {
             return false;
         }
 

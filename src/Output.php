@@ -35,13 +35,13 @@ class Output
     public function flush()
     {
         $handle = fopen($this->file, 'w');
-        fputcsv($handle, ['Package', 'Link', 'Downloads'], ';');
+        fputcsv($handle, ['Package', 'Downloads', 'Type'], ';');
 
         foreach ($this->buffer as $row) {
             fputcsv($handle, [
                 $row['packageName'],
-                'https://packagist.org/packages/'.$row['packageName'],
                 $row['downloads'],
+                $row['type'],
             ],
             ';'
             );
