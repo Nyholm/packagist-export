@@ -72,6 +72,16 @@ class Parser
             return false;
         }
 
+        // Ignore Contracts
+        if (false !== strstr($packageNameAndVersion, '-contracts:')) {
+            return false;
+        }
+
+        // Ignore Packs
+        if (false !== strstr($packageNameAndVersion, '-pack:')) {
+            return false;
+        }
+
         list($packageName, $version) = explode(':', $packageNameAndVersion.':x', 2);
         if (in_array($packageName, $this->blacklist)) {
             return false;
